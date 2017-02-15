@@ -13,3 +13,7 @@ class ColorMarker:
         return self.position_image
     def __getitem__(self,position_real):
         return self.position_real
+    def addPointAsAvg(self,position):
+        newpos1=(int)(self.position_image[0]*0.9+position[0]*0.1)
+        newpos2=(int)(self.position_image[1]*0.9+position[1]*0.1)
+        self.position_image=(newpos1,newpos2)
