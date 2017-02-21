@@ -21,6 +21,9 @@ class ColorMarker:
         newpos_y=(int)((self.position_current_pixels[1]*(count-1)+position[1])/count)
         self.position_average_pixels=(newpos_x,newpos_y)
 
+    def updateMapPosition(self,position):
+        self.position_map=position
+
     def updateRealPosition(self,positon):
         self.position_current_real=position
         newpos_x=(int)(self.position_current_real[0]*0.9+position[0]*0.1)
